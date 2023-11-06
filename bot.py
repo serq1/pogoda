@@ -1,9 +1,9 @@
 import telebot
 import requests
-import schedule
+import schedule57852
 import time
 
-bot = telebot.TeleBot('5994935966:AAE8VMH-DwIVDC9xS3W-A6C61x9gq1Aa-i4')
+bot = telebot.TeleBot('599493594')
 
 start_txt = 'Привет! Это бот прогноза погоды за окном. Отправьте боту название города и он скажет, какая там температура и как она ощущается.'
 
@@ -16,7 +16,7 @@ def start(message):
 @bot.message_handler(content_types=['text'])
 def weather(message):
     city = message.text
-    url = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&lang=ru&appid=611126cbe47d90b47165019b11e8f39b'
+    url = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&lang=ru&appid=61'
     weather_data = requests.get(url).json()
     temperature = round(weather_data['main']['temp'])
     temperature_feels = round(weather_data['main']['feels_like'])
